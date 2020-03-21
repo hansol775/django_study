@@ -4,11 +4,10 @@ from django.db import models
 
 class Post(models.Model):
     message = models.TextField()
+    photo = models.ImageField(blank=True, upload_to='instagram/post/%Y/%m/%d') # pillow 설치
     is_public = models.BooleanField(default=False, verbose_name='공개여부')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
-
 
     # Java의 toString
     # 어드민페이지 저장되는거 이름 변경
