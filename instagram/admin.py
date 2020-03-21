@@ -9,7 +9,6 @@ from django.utils.safestring import mark_safe
 # 첫번째 방법
 # admin.site.register(Post) 
 
-
 # 두번째 방법 
 @admin.register(Post) # Wrapping
 class PostAdmin(admin.ModelAdmin):
