@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Comment, Tag
 from django.utils.safestring import mark_safe
 
 
@@ -32,3 +32,12 @@ class PostAdmin(admin.ModelAdmin):
 #     pass
 
 # admin.site.register(Post, PostAdmin)
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    pass
